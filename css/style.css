@@ -55,11 +55,25 @@ header {
     left: 0;
 }
 
+header.scroll {
+    background-color: #0000007c;
+}
+
+header.scroll .scroll-top-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-btn {
+    display: none;
+}
+
 header .title a{
     color: red;
 }
 
 header .inner {
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -90,8 +104,9 @@ nav ul a {
 }
 
 #s02 {
-    background: url(../img/young.png) no-repeat center/cover;
+    background-color: #ffffff;
     padding: 200px 0;
+    min-height: auto;
 }
 
 #s02 .t-wrap {
@@ -178,6 +193,7 @@ nav ul a {
 
 #s04 {
     padding: 200px 0;
+    min-height: auto;
 }
 
 #s04 .t-wrap {
@@ -202,6 +218,7 @@ nav ul a {
 
 .s04-list li {
     background-color: #ddd;
+    width: 200px;
     height: 350px;
     padding: 20px;
     text-align: center;
@@ -224,4 +241,54 @@ nav ul a {
 .s04-list li p {
     font-size: 14px;
     line-height: 1.4;
+}
+
+footer {
+    background-color: #f7f7f7;
+    padding: 20px 40px;
+}
+
+footer .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.foot-list {
+    display: flex;
+    gap: 20px;
+}
+
+.foot-list li img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.scroll-top-btn:hover {
+    background-color: #444;
 }
